@@ -1,12 +1,12 @@
+import { data } from './IncompatibleFood.js';
 
-
-fetch("/IncompatibleFood.json")
-  .then((response) => response.json())
-  .then((data) => {
-    getDes(data.Tbl_IncompatibleFood);
+// fetch("/IncompatibleFood.json")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     getDes(data.Tbl_IncompatibleFood);
     
-  })
-  .catch((error) => console.error("Error fetching data:", error));
+//   })
+//   .catch((error) => console.error("Error fetching data:", error));
 
 let numOfMuu = 0;
 let numOfOne = 0;
@@ -18,6 +18,8 @@ let numOfYinPu = 0;
 let numOfASate = 0;
 let numOfThay = 0;
 let numOfTout = 0;
+
+getDes(data.Tbl_IncompatibleFood);
 
 function getDes(listItems) {
   listItems.forEach((item) => {

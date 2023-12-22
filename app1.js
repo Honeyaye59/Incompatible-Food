@@ -1,20 +1,22 @@
+import { data } from './IncompatibleFood.js';
+
 let currentPage = 1;
 const maxPagButtons = 6;
 let startPagButton = 1;
 let endPagButton = startPagButton + maxPagButtons;
 // let tempFirstPage = 1;
-
-fetch("/IncompatibleFood.json")
-  .then((response) => {
-    console.log(response);
-    console.log(response.json());
-    return response.json();
-  })
-  .then((data) => {
-    displayLeftData(data.Tbl_IncompatibleFood); //[{},{},{}]
-    console.log(data.Tbl_IncompatibleFood);
-  })
-  .catch((error) => console.error("Error fetching data:", error));
+displayLeftData(data.Tbl_IncompatibleFood)
+// fetch("/IncompatibleFood.json")
+//   .then((response) => {
+//     console.log(response);
+//     console.log(response.json());
+//     return response.json();
+//   })
+//   .then((data) => {
+//     displayLeftData(data.Tbl_IncompatibleFood); //[{},{},{}]
+//     console.log(data.Tbl_IncompatibleFood);
+//   })
+//   .catch((error) => console.error("Error fetching data:", error));
 
 function displayLeftData(data) {
   const leftContainer = document.getElementById("left-content-container");
